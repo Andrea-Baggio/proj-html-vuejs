@@ -2,6 +2,7 @@
   <main>
     <div>
       Main
+      <font-awesome-icon icon="fa-solid fa-chevron-down" />
     </div>
   </main>
 </template>

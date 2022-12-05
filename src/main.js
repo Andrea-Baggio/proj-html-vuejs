@@ -10,6 +10,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
   faTwitter, faFacebook, faInstagram, faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
+
+// import {
+//   faChevronDown,
+// } from '@fortawesome/free-solid-svg-icons';
 import App from './App.vue';
 
 /* add icons to the library */

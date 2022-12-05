@@ -12,6 +12,9 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.background {
+  max-width: 1500px;
+  margin: auto;
+}
 </style>

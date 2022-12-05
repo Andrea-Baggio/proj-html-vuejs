@@ -7,11 +7,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter, faFacebook, faInstagram, faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 import App from './App.vue';
 
 /* add icons to the library */
-library.add(faTwitter, faFacebook, faInstagram);
+library.add(faTwitter, faFacebook, faInstagram, faLinkedin);
 
 /* add font awesome icon component */
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);

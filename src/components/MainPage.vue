@@ -2,9 +2,6 @@
   <main>
     <div>
       Main
-      <font-awesome-icon icon="fa-brands fa-twitter" />
-      <font-awesome-icon icon="fa-brands fa-facebook" />
-      <font-awesome-icon icon="fa-brands fa-instagram" />
     </div>
   </main>
 </template>
@@ -15,6 +12,9 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.background {
+  max-width: 1500px;
+  margin: auto;
+}
 </style>

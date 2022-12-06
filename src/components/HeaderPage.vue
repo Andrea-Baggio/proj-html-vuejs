@@ -2,13 +2,13 @@
   <header>
     <!-- PRIMA PARTE -->
     <div class="super-background">
+      <ul class="icons">
+        <li><font-awesome-icon icon="fa-solid fa-user" /></li>
+        <li><font-awesome-icon icon="fa-solid fa-futbol" /></li>
+        <li><font-awesome-icon icon="fa-solid fa-book" /></li>
+        <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
+      </ul>
       <div class="background">
-        <ul class="icons">
-          <li><font-awesome-icon icon="fa-solid fa-user" /></li>
-          <li><font-awesome-icon icon="fa-solid fa-futbol" /></li>
-          <li><font-awesome-icon icon="fa-solid fa-book" /></li>
-          <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
-        </ul>
         <div class="container">
           <div class="menu">
             <div class="logo">
@@ -70,10 +70,10 @@
           class="statistics"
         >
           <div class="no-flex fw-bolder">
-            <div class="number pe-5">
+            <div class="number text-center">
               {{ element.number }}
             </div>
-            <div class="tiny pe-5">
+            <div class="tiny text-start">
               {{ element.description }}
             </div>
           </div>
@@ -168,9 +168,8 @@ export default {
   margin: auto;
   background-image: url('@/img/home-movation-shape-face.png');
   background-size: 30%;
-  background-position: bottom -35px right 195px;;
+  background-position: bottom -35px right 200px;;
   background-repeat: no-repeat;
-  z-index: 9;
   position: relative;
 }
 
@@ -273,9 +272,9 @@ button:hover {
 .box2 {
   width: 50%;
   background-image: url(@/img/home-movation-hero-image.png);
-  background-size: 78%;
+  background-size: 75%;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: left 10px bottom 0;
 }
 
 // SECONDA PARTE
@@ -297,11 +296,15 @@ button:hover {
 .number {
   font-size: 1.5em;
   color: rgb(29, 158, 138);
+  margin-left: -50px;
 }
 
 .tiny {
   font-size: .7em;
   color: black;
+  padding: 0 3.5rem;
+  white-space: nowrap;
+  margin-left: -50px;
 }
 
 .box4 {

@@ -1,5 +1,6 @@
 <template>
   <header>
+    <!-- PRIMA PARTE -->
     <div class="super-background">
       <div class="background">
         <div class="container">
@@ -45,6 +46,35 @@
         </div>
       </div>
     </div>
+
+    <!-- SECONDA PARTE -->
+    <div class="container2">
+      <ul class="ul-flex d-flex justify-content-between">
+        <img
+          src="@/img/background-pattern-grid-line-06-2.0.png"
+          alt=""
+        >
+        <li
+          v-for="element in arrResults"
+          :key="element.id"
+          class="statistics"
+        >
+          <div class="no-flex fw-bolder">
+            <div class="number">
+              {{ element.number }}
+            </div>
+            <div class="tiny">
+              {{ element.description }}
+            </div>
+          </div>
+
+          <img
+            src="@/img/background-pattern-grid-line-06-2.0.png"
+            alt=""
+          >
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
@@ -53,6 +83,7 @@ export default {
   name: 'HeaderPage',
   data() {
     return {
+      // PRIMA PARTE
       arrMenu: [{
         item: 'Home',
       },
@@ -72,16 +103,30 @@ export default {
         item: 'Shop',
       },
       ],
+      // SECONDA PARTE
+      arrResults: [{
+        number: '1.926',
+        description: 'FINISHED SESSIONS',
+      },
+      {
+        number: '100%',
+        description: 'SATISFACTION RATE',
+      },
+      {
+        number: '3092+',
+        description: 'ENROLLED LEARNERS',
+      },
+      {
+        number: '200',
+        description: 'ONLINE INSTUCTORS',
+      }],
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-header {
-  font-size: .8em;
-}
-
+// PRIMA PARTE
 .super-background {
   background-image: url('@/img/background-pattern-wavify.png');
   background-color: rgb(247, 247, 253);
@@ -90,9 +135,10 @@ header {
 .background {
   max-width: 1500px;
   margin: auto;
+  font-size: .8em;
   background-image: url('@/img/home-movation-shape-face.png');
   background-size: 30%;
-  background-position: bottom -25px right 180px;;
+  background-position: bottom -35px right 195px;;
   background-repeat: no-repeat;
   z-index: 9;
 }
@@ -180,8 +226,34 @@ button:hover {
 .box2 {
   width: 50%;
   background-image: url(@/img/home-movation-hero-image.png);
-  background-size: contain;
+  background-size: 78%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
+}
+
+// SECONDA PARTE
+.container2 {
+  max-width: 900px;
+  margin: auto;
+}
+
+.ul-flex {
+  margin: 0 -1.5rem;
+}
+
+.statistics {
+  display: flex;
+}
+
+.no-flex {
+  color: rgb(29, 158, 138);
+}
+
+.number {
+  font-size: 1.5em;
+}
+
+.tiny {
+  font-size: .7em;
 }
 </style>

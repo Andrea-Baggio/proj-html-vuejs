@@ -209,7 +209,6 @@ export default {
 }
 
 li {
-  list-style: none;
   align-self: flex-end;
 }
 

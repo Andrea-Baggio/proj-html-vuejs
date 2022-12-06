@@ -13,7 +13,7 @@
             "Every morning you have two <br> choices: continue to sleep with <br>
             your dreams, or wake up and <br> chase them."
           </div>
-          <div class="founders-block row d-flex flex-column gy-2">
+          <div class="founders-block row d-flex flex-column gy-1 pb-5">
             <div>
               <img
                 src="@/img/home-movation-shape-01.png"
@@ -30,17 +30,28 @@
         </div>
       </div>
       <!-- SECONDA PARTE -->
-      <ul class="py-5">
+      <div>BEGIN YOUR JOURNEY AT MAXCOACH</div>
+      <h1>Latest <span class="color">Online Courses</span></h1>
+      <ul class="d-flex py-5">
         <li
           v-for="element in arrPackages"
           :key="element.id"
         >
-          {{ element.price }}
           <img
-            src="element.img"
+            :src="element.img"
             alt=""
             class="picture"
           >
+          <div class="price">
+            {{ element.price }}
+          </div>
+          <div class="summa">
+            {{ element.summa }}
+          </div>
+          <div class="info">
+            <span>{{ element.nLessons }}</span>
+            <span>{{ element.nStudents }}</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -95,6 +106,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .background {
   max-width: 1500px;
 }

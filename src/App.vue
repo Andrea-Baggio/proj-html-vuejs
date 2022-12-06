@@ -39,4 +39,8 @@ export default {
 .body{
   font-family: 'Lato', sans-serif;
 }
+
+li {
+  list-style: none;
+}
 </style>

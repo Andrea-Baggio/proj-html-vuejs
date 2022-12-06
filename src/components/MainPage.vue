@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-      <!-- TODO:ricorda l'icona -->
+      ciao
     </div>
   </main>
 </template>

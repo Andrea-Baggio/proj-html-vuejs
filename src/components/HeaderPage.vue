@@ -3,6 +3,12 @@
     <!-- PRIMA PARTE -->
     <div class="super-background">
       <div class="background">
+        <ul class="icons">
+          <li><font-awesome-icon icon="fa-solid fa-user" /></li>
+          <li><font-awesome-icon icon="fa-solid fa-futbol" /></li>
+          <li><font-awesome-icon icon="fa-solid fa-book" /></li>
+          <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
+        </ul>
         <div class="container">
           <div class="menu">
             <div class="logo">
@@ -19,6 +25,10 @@
                 :key="element.id"
               >
                 {{ element.item }}
+                <font-awesome-icon
+                  icon="fa-solid fa-chevron-down"
+                  class="chevron"
+                />
               </li>
             </ul>
 
@@ -161,6 +171,24 @@ export default {
   background-position: bottom -35px right 195px;;
   background-repeat: no-repeat;
   z-index: 9;
+  position: relative;
+}
+
+.icons {
+  padding: 10px;
+  box-shadow: 2px 2px 10px 5px #ececec;
+  border-right: none;
+  border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  background-color: white;
+  font-size: .9em;
+  position: absolute;
+  right: 0;
+  top: 8rem;
+  li {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+  }
 }
 
 .container {
@@ -193,6 +221,10 @@ li {
   flex-basis: 80%;
   padding: 0 5.5rem;
   color: rgb(112, 108, 141);
+}
+
+.chevron {
+  font-size: .6em;
 }
 
 .socials {

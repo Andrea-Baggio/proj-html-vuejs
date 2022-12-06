@@ -1,8 +1,7 @@
 <template>
   <main>
     <div>
-      Main
-      <font-awesome-icon icon="fa-solid fa-chevron-down" />
+      <!-- TODO:ricorda l'icona -->
     </div>
   </main>
 </template>

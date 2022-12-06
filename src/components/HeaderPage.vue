@@ -29,7 +29,7 @@
               <li><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
             </ul>
           </div>
-          <div class="box">
+          <div class="box d-flex">
             <div class="box1">
               <div>I'M WINGMAN</div>
               <h1>Peace On Earth A Wonderful Wish <br> But No Way</h1>
@@ -60,10 +60,10 @@
           class="statistics"
         >
           <div class="no-flex fw-bolder">
-            <div class="number">
+            <div class="number pe-5">
               {{ element.number }}
             </div>
-            <div class="tiny">
+            <div class="tiny pe-5">
               {{ element.description }}
             </div>
           </div>
@@ -74,6 +74,27 @@
           >
         </li>
       </ul>
+
+      <div class="box d-flex">
+        <div class="box3">
+          <div class="fw-bolder">
+            ABOUT ME
+          </div>
+          <h1>How to Be an Alpha <br> Male: The 15 Habits of <br> True Alphas</h1>
+        </div>
+        <div class="box4">
+          <div class="alpha pb-3">
+            Want to learn how to be <span class="color">an alpha man</span>?
+            How to be more masculine? How to be the man you've always wanted to be?
+          </div>
+          <div class="goal">
+            Your goal is to show the consistency of business, core values, and customer care.
+            Punctuality, responsibility, individuality, accuracy, enthusiasm - you have to
+            clearly explain how these qualities are applicable to your work.
+            And the important thing is you do love what you do.
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -135,7 +156,6 @@ export default {
 .background {
   max-width: 1500px;
   margin: auto;
-  font-size: .8em;
   background-image: url('@/img/home-movation-shape-face.png');
   background-size: 30%;
   background-position: bottom -35px right 195px;;
@@ -144,7 +164,7 @@ export default {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -181,16 +201,11 @@ li {
   flex-basis: 10%;
   gap: 1rem;
   color: rgb(51, 51, 51);
-  li {
-  font-size: 1.2em;
-  }
 }
 
-.box {
-  display: flex;
-}
-
-.box1 {
+.box1,
+.box3,
+.box4 {
   width: 50%;
   padding: 4rem 0;
 }
@@ -233,27 +248,45 @@ button:hover {
 
 // SECONDA PARTE
 .container2 {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 3.3rem 0;
 }
 
 .ul-flex {
   margin: 0 -1.5rem;
+  margin-right: 2.7rem;
 }
 
 .statistics {
   display: flex;
 }
 
-.no-flex {
-  color: rgb(29, 158, 138);
-}
-
 .number {
   font-size: 1.5em;
+  color: rgb(29, 158, 138);
 }
 
 .tiny {
   font-size: .7em;
+  color: black;
+}
+
+.box4 {
+  padding-top: 6rem;
+  width: 50%;
+}
+
+.alpha {
+  line-height: 1.7em;
+  font-weight: 600;
+  .color {
+    color: rgb(29, 158, 138);
+  }
+}
+
+.goal {
+  color: rgb(119, 113, 108);
+  font-size: .9em;
 }
 </style>

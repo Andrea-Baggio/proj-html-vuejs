@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faChevronDown, faCartShopping, faBook, faArrowRight, faLifeRing,
+  faChevronDown, faCartShopping, faBook, faArrowRight, faLifeRing, faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faFileLines, faUser } from '@fortawesome/free-regular-svg-icons';
@@ -31,6 +31,7 @@ library.add(
   faArrowRight,
   faFileLines,
   faLifeRing,
+  faCheck,
 );
 
 /* add font awesome icon component */

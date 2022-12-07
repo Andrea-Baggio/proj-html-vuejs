@@ -27,7 +27,7 @@
                 alt=""
               >
             </div>
-            <div class="kaixa fw-bolder">
+            <div class="color2 fw-bolder">
               Kaixa Stark
             </div>
             <div class="name">
@@ -43,7 +43,7 @@
       <h1 class="text-center">
         Latest <span class="color">Online Courses</span>
       </h1>
-      <ul class="d-flex justify-content-around py-5">
+      <ul class="d-flex justify-content-between py-5">
         <li
           v-for="element in arrPackages"
           :key="element.id"
@@ -87,6 +87,35 @@
       </div>
 
       <!-- TERZA PARTE -->
+      <div class="card-container">
+        <div class="card card1">
+          <div class="fw-normal">
+            BOOK STORE ONLINE
+          </div>
+          <h1>
+            <span class="color2">Be Alpha With</span>  <br>
+            <span class="color">Wingman's Book</span>
+          </h1>
+          <ul class="check-list">
+            <li
+              v-for="element in arrList"
+              :key="element.id"
+            >
+              <font-awesome-icon
+                class="color"
+                icon="fa-solid fa-check"
+              />
+              {{ element.item }}
+            </li>
+          </ul>
+        </div>
+        <div class="card card2">
+          sono una card
+        </div>
+        <div class="card card3">
+          sono una card
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -145,6 +174,19 @@ export default {
         nLessons: '17 Lessons',
         nStudents: '50 Students',
       }],
+      // TERZA PARTE
+      arrList: [{
+        item: 'Help you understand yourself better',
+      },
+      {
+        item: 'Revealing mature tips',
+      },
+      {
+        item: 'Give the right advice',
+      },
+      {
+        item: 'Fascinating examples of alpha man',
+      }],
     };
   },
 };
@@ -174,7 +216,7 @@ export default {
   font-size: 1.1em;
 }
 
-.kaixa {
+.color2 {
   color: rgb(66, 60, 101);
 }
 
@@ -203,8 +245,8 @@ ul {
 }
 
 .picture {
-  height: 154px;
-  width: 236px;
+  height: 170px;
+  width: 280px;
   z-index: -99;
 }
 
@@ -268,4 +310,37 @@ button:hover {
 }
 
 // TERZA PARTE
+
+.card-container {
+  border: 2px solid blue;
+  border-radius: 1px;
+  display: flex;
+}
+
+.card {
+  border: 2px solid red;
+  border-radius: 1px;
+}
+
+.card1 {
+  flex-basis: 33%;
+  line-height: 2rem;
+  h1 {
+    font-weight: 100;
+    line-height: 3.5rem;
+  }
+}
+
+.check-list  {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  color: rgb(119, 113, 108);
+  margin-left: -30px;
+}
+
+.card2,
+.card3 {
+  flex-basis: 33%;
+}
 </style>

@@ -58,15 +58,32 @@
           <div class="price color fw-bold">
             {{ element.price }}
           </div>
-          <div class="summa">
-            <!-- {{ element.summa }} -->
+          <div class="summa fw-bold">
+            {{ element.summa }}
           </div>
           <div class="info">
-            <span>{{ element.nLessons }}</span>
-            <span>{{ element.nStudents }}</span>
+            <span>
+              <font-awesome-icon
+                class="lessons"
+                icon="fa-solid fa-file"
+              />{{ element.nLessons }}
+            </span>
+            <span>
+              <font-awesome-icon
+                class="students"
+                icon="fa-solid fa-user"
+              />{{ element.nStudents }}
+            </span>
           </div>
         </li>
       </ul>
+      <div class="text-center">
+        <button>
+          View all courses <span class="arrow">
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </span>
+        </button>
+      </div>
     </div>
   </main>
 </template>
@@ -176,24 +193,61 @@ ul {
 }
 
 .begin {
+  padding-top: 4.5rem;
   color: rgb(119, 113, 108);
 }
 
 .picture {
   height: 154px;
   width: 236px;
+  z-index: -99;
 }
 
-.packages img:hover {
-    cursor: pointer;
-    transform: scale(2, 1);
-  }
+.packages:hover {
+  cursor: pointer;
+  transition: 1.2s;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 10px 5px #ececec;
+}
+
+.price,
+.summa {
+  padding: 0 1rem;
+}
+
+.summa {
+  color: rgb(70, 66, 106);
+  word-wrap: break-word;
+  max-width: 236px;
+}
 
 .info {
+  padding: 0 1rem;
   display: flex;
-  gap: .8rem;
+  gap: .9rem;
   font-family: 'Roboto', sans-serif;
   font-size: .8em;
   color: rgb(119, 113, 108);
+}
+
+.lessons,
+.students {
+  margin-right: .3em;
+}
+
+button {
+  padding: .5rem 2.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  background-color: rgb(32, 173, 150);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: .2rem;
+}
+
+button:hover {
+  background-color: rgb(63, 58, 100);
+  transition: .6s;
 }
 </style>

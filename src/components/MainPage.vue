@@ -43,7 +43,7 @@
       <h1 class="text-center">
         Latest <span class="color">Online Courses</span>
       </h1>
-      <ul class="d-flex py-5">
+      <ul class="d-flex justify-content-around py-5">
         <li
           v-for="element in arrPackages"
           :key="element.id"
@@ -54,26 +54,27 @@
             alt=""
             class="picture"
           >
-
-          <div class="price color fw-bold">
-            {{ element.price }}
-          </div>
-          <div class="summa fw-bold">
-            {{ element.summa }}
-          </div>
-          <div class="info">
-            <span>
-              <font-awesome-icon
-                class="lessons"
-                icon="fa-solid fa-file"
-              />{{ element.nLessons }}
-            </span>
-            <span>
-              <font-awesome-icon
-                class="students"
-                icon="fa-solid fa-user"
-              />{{ element.nStudents }}
-            </span>
+          <div class="package-list">
+            <div class="price color fw-bold">
+              {{ element.price }}
+            </div>
+            <div class="summa fw-bold">
+              {{ element.summa }}
+            </div>
+            <div class="info">
+              <span>
+                <font-awesome-icon
+                  class="lessons"
+                  icon="fa-regular fa-file-lines"
+                />{{ element.nLessons }}
+              </span>
+              <span>
+                <font-awesome-icon
+                  class="students"
+                  icon="fa-regular fa-user"
+                />{{ element.nStudents }}
+              </span>
+            </div>
           </div>
         </li>
       </ul>
@@ -84,6 +85,8 @@
           </span>
         </button>
       </div>
+
+      <!-- TERZA PARTE -->
     </div>
   </main>
 </template>
@@ -148,6 +151,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .color {
   color: rgb(29, 158, 138);
 }
@@ -158,6 +162,7 @@ export default {
 
 .container2 {
   max-width: 1000px;
+  margin: auto;
 }
 
 .box1 {
@@ -210,6 +215,12 @@ ul {
   box-shadow: 2px 2px 10px 5px #ececec;
 }
 
+.package-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .price,
 .summa {
   padding: 0 1rem;
@@ -233,12 +244,13 @@ ul {
 .lessons,
 .students {
   margin-right: .3em;
+  font-size: .9em;
 }
 
 button {
   padding: .5rem 2.3rem;
-  margin-top: 2.5rem;
-  margin-bottom: 5rem;
+  margin-top: .5rem;
+  margin-bottom: 4.5rem;
   background-color: rgb(32, 173, 150);
   color: white;
   font-weight: bold;
@@ -250,4 +262,10 @@ button:hover {
   background-color: rgb(63, 58, 100);
   transition: .6s;
 }
+
+.arrow {
+  padding-left: .4rem;
+}
+
+// TERZA PARTE
 </style>

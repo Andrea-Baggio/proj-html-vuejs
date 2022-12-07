@@ -3,8 +3,8 @@
     <!-- PRIMA PARTE -->
     <div class="super-background">
       <ul class="icons">
-        <li><font-awesome-icon icon="fa-solid fa-user" /></li>
-        <li><font-awesome-icon icon="fa-solid fa-futbol" /></li>
+        <li><font-awesome-icon icon="fa-regular fa-user" /></li>
+        <li><font-awesome-icon icon="fa-solid fa-life-ring" /></li>
         <li><font-awesome-icon icon="fa-solid fa-book" /></li>
         <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
       </ul>
@@ -185,7 +185,7 @@ export default {
   position: absolute;
   position: fixed;
   right: 0;
-  top: 8rem;
+  top: 35vh;
   z-index: 99;
   li {
     padding-top: 0 .3rem;

@@ -12,9 +12,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faChevronDown, faCartShopping, faBook, faFutbol, faUser, faArrowRight, faFile,
+  faChevronDown, faCartShopping, faBook, faArrowRight, faLifeRing,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { faFileLines, faUser } from '@fortawesome/free-regular-svg-icons';
 import App from './App.vue';
 
 /* add icons to the library */
@@ -26,10 +27,10 @@ library.add(
   faChevronDown,
   faCartShopping,
   faBook,
-  faFutbol,
   faUser,
   faArrowRight,
-  faFile,
+  faFileLines,
+  faLifeRing,
 );
 
 /* add font awesome icon component */

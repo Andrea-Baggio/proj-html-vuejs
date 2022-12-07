@@ -24,7 +24,10 @@
                 v-for="element in arrMenu"
                 :key="element.id"
               >
-                {{ element.item }}
+                <span class="menu-items">
+                  {{ element.item }}
+                </span>
+
                 <font-awesome-icon
                   icon="fa-solid fa-chevron-down"
                   class="chevron"
@@ -48,7 +51,9 @@
                 better then the day before. It all adds up.
               </div>
               <button>
-                Get Started For Free <span class="arrow">&#10141;</span>
+                Get Started For Free <span class="arrow">
+                  <font-awesome-icon icon="fa-solid fa-arrow-right" />
+                </span>
               </button>
             </div>
             <div class="box2" />
@@ -59,7 +64,7 @@
 
     <!-- SECONDA PARTE -->
     <div class="container2">
-      <ul class="ul-flex d-flex justify-content-between">
+      <ul class="ul-flex d-flex">
         <img
           src="@/img/background-pattern-grid-line-06-2.0.png"
           alt=""
@@ -67,27 +72,24 @@
         <li
           v-for="element in arrResults"
           :key="element.id"
-          class="statistics"
+          class="statistics d-flex"
         >
-          <div class="no-flex fw-bolder">
-            <div class="number text-center">
+          <div class="no-flex fw-bolder text-center">
+            <div class="number">
               {{ element.number }}
             </div>
-            <div class="tiny text-start">
+            <div class="tiny">
               {{ element.description }}
             </div>
           </div>
 
-          <img
-            src="@/img/background-pattern-grid-line-06-2.0.png"
-            alt=""
-          >
+          <div class="pattern-line" />
         </li>
       </ul>
 
       <div class="box d-flex">
         <div class="box3">
-          <div class="fw-bolder">
+          <div class="color fw-bolder">
             ABOUT ME
           </div>
           <h1>How to Be an Alpha <br> Male: The 15 Habits of <br> True Alphas</h1>
@@ -180,14 +182,20 @@ export default {
   border-top-left-radius: .3rem;
   border-bottom-left-radius: .3rem;
   background-color: white;
-  font-size: .9em;
   position: absolute;
+  position: fixed;
   right: 0;
   top: 8rem;
+  z-index: 99;
   li {
-    padding-top: .3rem;
+    padding-top: 0 .3rem;
     padding-bottom: .3rem;
   }
+}
+
+.icons li:hover {
+  color: rgb(32, 173, 150);
+  cursor: pointer;
 }
 
 .container {
@@ -201,28 +209,28 @@ export default {
 }
 
 .logo {
-  height: 19px;
+  height: 26px;
   flex-basis: 10%;
   img {
     height: 100%;
   }
 }
 
-li {
-  align-self: flex-end;
+.menu-items:hover {
+  cursor: pointer;
+  color: rgb(32, 173, 150);
 }
 
 .drop-down {
   display: flex;
   justify-content: space-between;
-  align-content: flex-start;
   flex-basis: 80%;
   padding: 0 5.5rem;
   color: rgb(112, 108, 141);
 }
 
 .chevron {
-  font-size: .6em;
+  font-size: .7em;
 }
 
 .socials {
@@ -231,6 +239,11 @@ li {
   flex-basis: 10%;
   gap: 1rem;
   color: rgb(51, 51, 51);
+}
+
+.socials li:hover {
+  color: rgb(32, 173, 150);
+  cursor: pointer;
 }
 
 .box1,
@@ -246,7 +259,6 @@ h1 {
 
 .sub-title {
   color: rgb(119, 113, 108);
-  font-size: .9em;
   line-height: 1.9em;
   margin: 1.2rem 0;
 }
@@ -262,6 +274,7 @@ button {
 
 button:hover {
   background-color: rgb(63, 58, 100);
+  transition: .6s;
 }
 
 .arrow {
@@ -286,24 +299,27 @@ button:hover {
 .ul-flex {
   margin: 0 -1.5rem;
   margin-right: 2.7rem;
+  justify-content: space-between;
 }
 
-.statistics {
-  display: flex;
+.no-flex {
+  width: 16rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pattern-line {
+  background-image: url('@/img/background-pattern-grid-line-06.png');
+  height: 100px;
+  width: 1px;
 }
 
 .number {
-  font-size: 1.5em;
+  font-size: 2em;
   color: rgb(29, 158, 138);
-  margin-left: -50px;
 }
 
 .tiny {
-  font-size: .7em;
-  color: black;
-  padding: 0 3.5rem;
   white-space: nowrap;
-  margin-left: -50px;
 }
 
 .box4 {
@@ -314,13 +330,15 @@ button:hover {
 .alpha {
   line-height: 1.7em;
   font-weight: 600;
-  .color {
-    color: rgb(29, 158, 138);
-  }
+}
+
+.color {
+  color: rgb(29, 158, 138);
 }
 
 .goal {
   color: rgb(119, 113, 108);
-  font-size: .9em;
+  line-height: 1.8em;
+  font-size: 13.4px;
 }
 </style>

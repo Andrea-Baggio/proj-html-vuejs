@@ -108,12 +108,27 @@
               {{ element.item }}
             </li>
           </ul>
+          <button class="card-button">
+            Get Free Ebook
+          </button>
         </div>
         <div class="card card2">
-          sono una card
+          <img
+            src="@/img/product-book-11-400x400.jpg"
+            alt=""
+          >
+          <h5 class="book-title color2 fw-bold text-center">
+            Alpha man by Maxcoach
+          </h5>
+          <h4 class="color fw-bold text-center">
+            29.00$
+          </h4>
         </div>
         <div class="card card3">
-          sono una card
+          <img
+            src="@/img/product-book-10-400x400.jpg"
+            alt=""
+          >
         </div>
       </div>
     </div>
@@ -312,12 +327,12 @@ button:hover {
 // TERZA PARTE
 
 .card-container {
-  border: 2px solid blue;
-  border-radius: 1px;
   display: flex;
+  gap: 1%;
 }
 
 .card {
+  // border: none;
   border: 2px solid red;
   border-radius: 1px;
 }
@@ -337,10 +352,26 @@ button:hover {
   gap: 0px;
   color: rgb(119, 113, 108);
   margin-left: -30px;
+  margin-top: 1rem;
+}
+
+.card-button {
+  width: 65%;
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .card2,
 .card3 {
   flex-basis: 33%;
+}
+
+.card2, .card3 img:hover{
+  cursor: pointer;
+}
+
+.book-title:hover {
+  color: rgb(29, 158, 138);
 }
 </style>

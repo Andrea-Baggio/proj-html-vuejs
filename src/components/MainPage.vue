@@ -4,18 +4,15 @@
       <!-- PRIMA PARTE -->
       <div class="box d-flex">
         <div class="box1">
-          VIDEO
-          <!-- TODO:video youtube -->
-          <!-- quando fai questa parte ricorda che puoi aggiustare le box con i padding -->
-
-          <!-- <title id="video">
-            <iframe
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-            frameborder="0"
-            >CIAO</iframe>
-          </title> -->
+          <iframe
+            src="https://www.youtube.com/embed/SAtDOpVSkiA"
+            height="400"
+            width="600"
+            title="video"
+            class="video"
+          />
         </div>
-        <div class="box2">
+        <div class="box2 ps-5">
           <div class="py-5">
             "Every morning you have two <br> choices: continue to sleep with <br>
             your dreams, or wake up and <br> chase them."
@@ -43,7 +40,7 @@
       <h1 class="text-center">
         Latest <span class="color">Online Courses</span>
       </h1>
-      <ul class="d-flex justify-content-between py-5">
+      <ul class="packages-list d-flex justify-content-between py-5">
         <li
           v-for="element in arrPackages"
           :key="element.id"
@@ -113,6 +110,13 @@
           </button>
         </div>
         <div class="card card2">
+          <ul class="hover-cards">
+            <li><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></li>
+            <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
+            <li><font-awesome-icon icon="fa-regular fa-heart" /></li>
+            <li><font-awesome-icon icon="fa-solid fa-signal" /></li>
+          </ul>
+
           <img
             src="@/img/product-book-11-400x400.jpg"
             alt=""
@@ -125,10 +129,22 @@
           </h4>
         </div>
         <div class="card card3">
+          <ul class="hover-cards">
+            <li><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></li>
+            <li><font-awesome-icon icon="fa-solid fa-cart-shopping" /></li>
+            <li><font-awesome-icon icon="fa-regular fa-heart" /></li>
+            <li><font-awesome-icon icon="fa-solid fa-signal" /></li>
+          </ul>
+
           <img
             src="@/img/product-book-10-400x400.jpg"
             alt=""
-          >
+          > <h5 class="book-title color2 fw-bold text-center">
+            Real man 4.0 by Maxcoach
+          </h5>
+          <h4 class="color fw-bold text-center">
+            39.00$
+          </h4>
         </div>
       </div>
     </div>
@@ -240,14 +256,12 @@ export default {
 }
 
 // SECONDA PARTE
-
 .video {
-  height: 200px;
-  width: 200px;
-  border: 2px solid green;
+  margin-left: 30px;
+  border-radius: .5rem;
 }
 
-ul {
+.packages-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -332,9 +346,7 @@ button:hover {
 }
 
 .card {
-  // border: none;
-  border: 2px solid red;
-  border-radius: 1px;
+  border: none;
 }
 
 .card1 {
@@ -365,6 +377,15 @@ button:hover {
 .card2,
 .card3 {
   flex-basis: 33%;
+  position: relative;
+}
+
+.card2:hover,
+.card3:hover {
+  .hover-cards {
+    transition: .6s;
+    opacity: 1;
+  }
 }
 
 .card2, .card3 img:hover{
@@ -372,6 +393,31 @@ button:hover {
 }
 
 .book-title:hover {
+  cursor: pointer;
   color: rgb(29, 158, 138);
+}
+
+.hover-cards {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  opacity: 0;
+}
+
+.hover-cards li {
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  width: 35px;
+  padding: .3rem;
+}
+
+.hover-cards li:hover {
+  cursor: pointer;
+  background-color: rgb(29, 158, 138);
+  color: white;
 }
 </style>

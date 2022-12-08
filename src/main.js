@@ -17,7 +17,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
-  faFileLines, faUser, faHeart,
+  faFileLines, faUser, faHeart, faCalendar,
 } from '@fortawesome/free-regular-svg-icons';
 import App from './App.vue';
 
@@ -38,6 +38,7 @@ library.add(
   faMagnifyingGlass,
   faHeart,
   faSignal,
+  faCalendar,
 );
 
 /* add font awesome icon component */

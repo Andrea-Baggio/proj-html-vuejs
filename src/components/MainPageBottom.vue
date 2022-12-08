@@ -1,23 +1,59 @@
 <template>
-  <div class="container2">
-    <ul class="sponsors-container d-flex justify-content-between">
-      <li
-        v-for="element in arrSponsors"
-        :key="element.id"
-      >
-        <img
-          :src="element.img"
-          alt=""
+  <div>
+    <div class="container2">
+      <ul class="sponsors-container d-flex justify-content-between">
+        <li
+          v-for="element in arrSponsors"
+          :key="element.id"
         >
-      </li>
-    </ul>
-    <div class="box d-flex">
-      <div class="background">
-        <div class="box1">
-          scrivi...
+          <img
+            :src="element.img"
+            alt=""
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="larger-container">
+      <div class="box d-flex">
+        <div class="background">
+          <div class="box1">
+            scrivi...
+          </div>
         </div>
+        <div class="box2" />
       </div>
-      <div class="box2" />
+    </div>
+    <div class="container3">
+      <div>BLOG UPDATED</div>
+      <h1 class="pb-5">
+        Interesting <span class="color">articles updated</span> daily
+      </h1>
+      <ul class="articles-container d-flex justify-content-between">
+        <li
+          v-for="element in arrArticles"
+          :key="element.id"
+        >
+          <div class="image-container">
+            <img
+              :src="element.img"
+              alt=""
+            >
+          </div>
+          <div class="date">
+            <font-awesome-icon icon="fa-regular fa-calendar" />
+            {{ element.date }}
+          </div>
+          <h5 class="title">
+            {{ element.title }}
+          </h5>
+          <div class="description">
+            {{ element.description }}
+          </div>
+        </li>
+      </ul>
+      <div class="all color fw-bold">
+        VIEW ALL POSTS
+      </div>
     </div>
   </div>
 </template>
@@ -61,25 +97,25 @@ export default {
       }],
 
       arrArticles: [{
-        img1,
+        img: img1,
         date: ' May 13, 2020',
         title: 'How to Stay True to Your Personal Brand',
         description: 'When it comes to your business or career, you want …',
       },
       {
-        img2,
+        img: img2,
         date: ' May 13, 2020',
         title: '5 Vital Lessons in 5 Years of Freelancing',
         description: 'Being self-employed and working from home, it’s easy to get …',
       },
       {
-        img3,
+        img: img3,
         date: ' May 13, 2020',
         title: '11 Super Useful Tips for Small-Business Owners',
         description: 'Being a small-business owner poses a ton of challenges. We …',
       },
       {
-        img4,
+        img: img4,
         date: ' May 13, 2020',
         title: 'How to Give Yourself Grace to Start Again',
         description: 'Forgive yourself for bad habits you may have started or …',
@@ -90,12 +126,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.date {
+  color: rgb(119, 113, 108);
+  font-size: .8em;
+  font-family: 'Roboto', sans-serif;
+}
+
 .color {
   color: rgb(29, 158, 138);
 }
 
-.container2 {
+.container2,
+.container3 {
   max-width: 1000px;
+  margin: auto;
+}
+
+.larger-container {
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -105,12 +153,13 @@ export default {
   padding-bottom: 6.5rem;
   margin-left: -2rem;
 }
+
 .background {
   background-color: rgb(243, 243, 250);
 }
 
 .box {
-  height: 365px;
+  height: 465px;
 }
 
 .box > * {
@@ -126,6 +175,61 @@ export default {
   background-image: url('@/img/home-movation-testimonial-image.jpg');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.container3 {
+  margin-top: 9rem;
+}
+
+.articles-container {
+  margin-left: -2rem;
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  li:hover {
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+  }
+}
+
+.image-container {
+  height: 150px;
+  img {
+    height: 100%;
+  }
+}
+
+.description {
+  font-size: .9em;
+  color: rgb(119, 113, 108);
+}
+
+.description,
+.title {
+  width: 220px;
+}
+
+.title:hover {
+  cursor: pointer;
+  color: rgb(29, 158, 138);
+}
+
+.all {
+  border-bottom: 2px solid rgb(29, 158, 138);
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 135px;
+}
+
+.all:hover {
+  cursor: pointer;
+  color: rgb(38, 31, 45);
+  border-bottom: 2px solid rgb(38, 31, 45);
 }
 
 </style>

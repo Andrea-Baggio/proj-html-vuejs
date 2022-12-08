@@ -2,6 +2,7 @@
   <div class="body">
     <HeaderPageVue />
     <MainPageVue />
+    <MainPageBottomVue />
     <FooterPageVue />
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import HeaderPageVue from './components/HeaderPage.vue';
 import MainPageVue from './components/MainPage.vue';
+import MainPageBottomVue from './components/MainPageBottom.vue';
 import FooterPageVue from './components/FooterPage.vue';
 
 export default {
@@ -16,6 +18,7 @@ export default {
   components: {
     HeaderPageVue,
     MainPageVue,
+    MainPageBottomVue,
     FooterPageVue,
   },
 

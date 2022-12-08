@@ -11,6 +11,14 @@
         >
       </li>
     </ul>
+    <div class="box d-flex">
+      <div class="background">
+        <div class="box1">
+          scrivi...
+        </div>
+      </div>
+      <div class="box2" />
+    </div>
   </div>
 </template>
 
@@ -93,9 +101,31 @@ export default {
 
 .sponsors-container {
   align-items: center;
-  padding-top: 8rem;
-  padding-bottom: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6.5rem;
   margin-left: -2rem;
+}
+.background {
+  background-color: rgb(243, 243, 250);
+}
+
+.box {
+  height: 365px;
+}
+
+.box > * {
+  width: 50%;
+}
+
+.box1 {
+  background-image: url('@/img/background-pattern-wavify.png');
+  height: 100%;
+}
+
+.box2 {
+  background-image: url('@/img/home-movation-testimonial-image.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 </style>

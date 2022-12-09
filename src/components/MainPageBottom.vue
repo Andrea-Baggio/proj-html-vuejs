@@ -16,9 +16,35 @@
     <div class="larger-container">
       <div class="box d-flex">
         <div class="background">
+          <div class="button rounded-circle">
+            <div class="caret">
+              <font-awesome-icon icon="fa-solid fa-caret-up" />
+            </div>
+            1/4
+            <div class="caret">
+              <font-awesome-icon icon="fa-solid fa-caret-down" />
+            </div>
+          </div>
           <div class="box1">
             <div class="real color fw-bold text-center">
               REAL STORIES
+            </div>
+            <div class="story text-center">
+              I am free to learn at my own pace, follow my own schedule and choose the subject
+              I want to learn from the syllabus. Great study portal for people like me.
+            </div>
+            <div class="testimonial text-center">
+              <img
+                class="rounded-circle"
+                src="@/img/testimonial-avata-02.jpg"
+                alt=""
+              >
+            </div>
+            <div class="testimonial-name text-center">
+              Mina Hollace
+            </div>
+            <div class="testimonial-job text-center">
+              / Freelencer
             </div>
           </div>
         </div>
@@ -75,8 +101,6 @@ import img2 from '@/img/motivation-blog-03-480x325.jpg';
 import img3 from '@/img/motivation-blog-02-480x325.jpg';
 import img4 from '@/img/motivation-blog-01-480x325.jpg';
 
-// TERZO ARRAY
-
 export default {
   name: 'MainPageBottomVue',
   data() {
@@ -124,31 +148,6 @@ export default {
         title: 'How to Give Yourself Grace to Start Again',
         description: 'Forgive yourself for bad habits you may have started or …',
       }],
-
-      arrStories: [{
-        story: 'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
-        // picture: img1,
-        name: 'Mina Hollace',
-        job: '/ Freelancer',
-      },
-      {
-        story: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
-        // picture: img2,
-        name: 'Madley Pondor',
-        job: '/ IT Specialist',
-      },
-      {
-        story: 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.',
-        // picture: img3,
-        name: 'Luvic Dubble',
-        job: '/ Private Tutor',
-      },
-      {
-        story: 'I\'m a very strict person so I require everything to be organized and neat. Then, I\'ll be able to make things right and shine. MaxCoach guys just got me.',
-        // picture: img1,
-        name: 'Florence Themes',
-        job: '/ Multimedia Admin',
-      }],
     };
   },
 };
@@ -189,6 +188,7 @@ export default {
 
 .box {
   height: 465px;
+  position: relative;
 }
 
 .box > * {
@@ -266,4 +266,46 @@ export default {
   font-size: .8em;
 }
 
+.story {
+  max-width: 320px;
+  margin: auto;
+  line-height: 2em;
+  padding-top: 2rem;
+}
+
+.testimonial {
+  height: 70px;
+  margin-top: 2rem;
+  img {
+    height: 100%;
+  }
+}
+
+.testimonial-name {
+  font-size: .9em;
+  padding: .2rem 0;
+}
+
+.testimonial-job {
+  font-size: .7em;
+  color: rgb(119, 113, 108);
+}
+
+.button {
+  position: absolute;
+  right: 47.5%;
+  top: 40%;
+  background-color: white;
+  padding: 0 1.6rem;
+}
+
+.caret {
+  color: rgb(119, 113, 108);
+  margin-left: 5px;
+}
+
+.caret:hover {
+  cursor: pointer;
+  color: black;
+}
 </style>

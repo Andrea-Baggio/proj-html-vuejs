@@ -14,6 +14,7 @@ import {
 import {
   faChevronDown, faCartShopping, faBook, faArrowRight,
   faLifeRing, faCheck, faMagnifyingGlass, faSignal, faArrowUp,
+  faCaretDown, faCaretUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -40,6 +41,8 @@ library.add(
   faSignal,
   faCalendar,
   faArrowUp,
+  faCaretDown,
+  faCaretUp,
 );
 
 /* add font awesome icon component */

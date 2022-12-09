@@ -12,7 +12,7 @@
             <li>support@maxcoach.com</li>
           </ul>
 
-          <div class="small-container d-flex">
+          <div class="d-flex">
             <ul>
               <div class="text-white fw-bold">
                 Explore
@@ -44,11 +44,14 @@
           <li><font-awesome-icon icon="fa-brands fa-instagram" /></li>
           <li><font-awesome-icon icon="fa-brands fa-linkedin" /></li>
         </ul>
+        <div class="copyright text-center">
+          © 2020 Maxcoach. All Rights Reserved
+        </div>
       </div>
       <button class="click">
         <a href="#top">
           <font-awesome-icon icon="fa-solid fa-arrow-up" />
-          <span class="d-none">ciao</span>
+          <span class="d-none">x</span>
         </a>
       </button>
     </div>
@@ -89,7 +92,8 @@ export default {
 }
 }
 
-li {
+li,
+.copyright {
   font-size: .8em;
 }
 
@@ -104,6 +108,8 @@ li:hover {
 
 .click {
   border-radius: 50%;
+  border: none;
+  background-color: rgb(23, 22, 33);
   padding: 0;
   position: absolute;
   bottom: 3rem;

@@ -10,7 +10,10 @@
       </ul>
       <div class="background">
         <div class="container">
-          <div class="menu">
+          <div
+            id="top"
+            class="menu"
+          >
             <div class="logo">
               <a href="#">
                 <img

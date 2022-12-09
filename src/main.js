@@ -13,7 +13,7 @@ import {
 
 import {
   faChevronDown, faCartShopping, faBook, faArrowRight,
-  faLifeRing, faCheck, faMagnifyingGlass, faSignal,
+  faLifeRing, faCheck, faMagnifyingGlass, faSignal, faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -39,6 +39,7 @@ library.add(
   faHeart,
   faSignal,
   faCalendar,
+  faArrowUp,
 );
 
 /* add font awesome icon component */

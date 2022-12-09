@@ -163,6 +163,8 @@ export default {
 .super-background {
   background-image: url('@/img/background-pattern-wavify.png');
   background-color: rgb(247, 247, 253);
+  max-width: 1500px;
+  margin: auto;
 }
 
 .background {
